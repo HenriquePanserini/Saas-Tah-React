@@ -1,0 +1,78 @@
+@import (less) '../../less/mixins.less';
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Rubik&display=swap');
+
+@bg-default-color: #f9f5fa;
+@title-font: 'Caprasimo', cursive;
+@bolder-font: 700;
+@theme-color-default: steelblue;
+@title-color-default: rgb(69, 107, 212); 
+@display-default: flex; 
+@direction-default: row;
+@content-position-default: center;
+
+@cor-inicio: #1e7eeb;
+@cor-meio: #1e1bc7;
+@cor-fim: #351483;
+
+.nav-box {
+    padding: 0rem;
+    margin: 0rem;
+
+    .nav-bar {
+        display: @display-default;
+        flex-direction: @direction-default; 
+        flex-wrap: wrap;
+        padding: 0.25rem;
+        background-color: @bg-default-color;
+        justify-content: @content-position-default;
+    
+         .nav-title {
+             align-items: @content-position-default;
+             padding: 0.5rem;
+             padding-left: 1.515rem;
+             margin: 0px;
+             font-family: @title-font;
+             font-style: italic;
+             letter-spacing: -0.235rem;
+             position: static;
+
+             a {
+                text-decoration: none;
+                .gradient-text(@cor-inicio, @cor-meio, @cor-fim);
+             }
+    
+             span {
+                color: #e2e21c;
+             }
+    
+         }
+    
+         .nav-toolbar {
+            align-items: @content-position-default;
+            justify-content: space-around;
+            @font-face {
+                font-family: 'Rubik', sans-serif;
+                src: url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+            }
+    
+            a {
+                text-decoration: none;
+                font-size: 1.255rem;
+                color: @theme-color-default;
+                padding: .322rem;
+                padding-top: .522rem;
+            }
+    
+            .nav-button {
+                align-items: @content-position-default;
+                border-radius: 0.313rem;
+                margin-left: 1.115rem;
+
+                span {
+                    color: @theme-color-default;
+                    font-weight: @bolder-font;
+                }
+            }
+         }
+    }   
+}

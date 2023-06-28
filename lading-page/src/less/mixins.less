@@ -1,0 +1,17 @@
+@base-font-size: 16px;
+
+.px-to-rem(@value) {
+   @rem-value: (@value/@base-font-size)*1rem;
+}
+
+.gradiente-bg(@cor-inicio, @cor-meio, @cor-final){
+   background-color: @cor-inicio;
+   background-image: linear-gradient(to right, @cor-inicio, @cor-meio, @cor-final);
+}
+
+.gradient-text(@cor-inicio, @cor-meio, @cor-fim) {
+   background: linear-gradient(to right, @cor-inicio, @cor-meio, @cor-fim);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   padding-right: 0.2em;
+ }

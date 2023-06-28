@@ -1,0 +1,20 @@
+@import (less) './less/mixins.less';
+@import './less/mixins.less';
+
+@font-default: 'Helvetica', sans-serif;
+
+@cor-inicio: #1e7eeb;
+@cor-meio: #1964b9;
+@cor-fim: #124c8f;
+
+* {
+  font-family: @font-default;
+}
+
+:root {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  orientation: landscape;
+  .gradiente-bg(@cor-inicio, @cor-meio, @cor-fim)
+}
