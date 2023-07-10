@@ -27,7 +27,7 @@ const styles = {
 function NavigateComponent() {
   return (
      <Box className='nav-box' sx={{ flexGrow: 1, margin: 0, padding: 0 }}>
-        <AppBar className='nav-bar' style={styles.appBar}>
+        <AppBar className='nav-bar' style={styles.appBar} elevation={0}>
             <Typography className='nav-title' variant='h3' component='div' sx={{ flexGrow: 1}}>
                <Link href='/' underline='none' color='inherit'>
                   Tah!
