@@ -1,0 +1,70 @@
+@import '../../less/variable.less';
+@import (less) '../../less/mixins.less';
+
+@title-font: 'Caprasimo', cursive;
+
+.main-login-container {
+    display: @display-default;
+    flex-direction: @direction-default;
+    margin: @margin-default;
+    color: @font-color-default;
+    padding: @padding-default;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: fit-content;
+    height: fit-content;
+
+    .box-login-two {
+        margin: @margin-default;
+        padding: 0.938rem;
+        display: @display-default;
+        flex-direction: column;
+        justify-content: center;
+        width: 40%;
+        height: 100%;
+        background-color: whitesmoke;
+        color: rgb(47, 5, 73);
+
+        .form-container {
+            margin: @margin-default;
+            display: @display-default;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 37.5rem;
+
+            .form-login-title{
+                font-weight: @bolder-font;
+                .gradient-text(@cor-fim, @cor-meio, @cor-fim);
+            }
+
+            .checkbox-login {
+                padding: @padding-default;
+                margin: @margin-default;
+                align-items: center;
+                justify-content: center;
+                color: rgb(47, 5, 73);
+
+                label {
+                    padding: @padding-default;
+                    margin: @margin-default;
+                    position: relative;
+                    top: 0.098rem;
+                }
+            }
+
+            .register-login {
+                padding: @padding-default;
+                margin: @margin-default;
+                align-items: center;
+                justify-content: center;
+                color: rgb(47, 5, 73);
+
+                a {
+                    color: rgb(181, 36, 238);
+                    text-decoration: @default-none;
+                }
+            }
+        }
+    }
+}

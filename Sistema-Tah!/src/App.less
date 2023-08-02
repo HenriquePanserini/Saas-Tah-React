@@ -1,46 +1,43 @@
 @import (less) './less/mixins.less';
+@import './less/variable.less';
 
 @type-display: flex;
-@direction-default: column;
+@direction-column: column;
 @wrap-ativo: wrap;
-@font-color-default: #fdfffd;
 @justify-text: justify;
-@bolder-font: 700;
 @position-value-default: relative;
-@padding-default: 0px;
-@margin-default: 0px;
 
 #root {
-  margin: 0px;
-  padding: 0px;
+  margin: @margin-default;
+  padding: @padding-default;
   box-sizing: border-box;
   orientation: landscape;
-  display: flex;
+  display: @display-default;
   flex-direction: column;
   align-items: flex-start;
 }
 
 .main-box-content {
-   width: 97%;
-   height: 100%;
-   margin-left: -8px; 
-   display: @type-display;
-   flex-direction: @direction-default;
-   flex-wrap: wrap;
-   color: @font-color-default;
+  width: 97%;
+  height: 100%;
+  margin-left: -8px; 
+  display: @display-default;
+  flex-direction: @direction-column;
+  flex-wrap: wrap;
+  color: @font-color-default;
 
   .box-content-one {
       margin: 0px;
-      display: @type-display;
-      flex-direction: row;
+      display:@display-default;
+      flex-direction: @direction-default;
       flex-wrap: @wrap-ativo;
       justify-content: space-around;
       align-items: flex-start;
       width: 100%;
       height: 100%;
-
+  
       .divider-title{
-
+  
         .title-one {
           text-align: right;
           font-weight: @bolder-font;
@@ -52,7 +49,7 @@
           font-size: 0.875rem;
           letter-spacing: normal;
         }
-
+  
         .button-content {
           color: whitesmoke;
           border: 2px solid whitesmoke;
@@ -63,9 +60,9 @@
           margin-right: 150px;
         }
       }
-
+  
       .divider-img {
-
+  
         .img-note {
            padding: 0%;
            margin: 0%;
@@ -73,19 +70,19 @@
            width: 478px;
            height: 312px;
         }
-
+  
       }
- 
+  
   }
-
+  
   .box-content-two {
     margin: 0px;
     padding: 0px;
     height: 452px;
-    width: 992px;
+    width: 1042px;
     position: @position-value-default;
-    display: @type-display;
-    flex-direction: @direction-default;
+    display: @display-default;
+    flex-direction: column;
     flex-wrap: @wrap-ativo;
     justify-content: center;
     align-items: end;
@@ -119,9 +116,9 @@
       }
     }
     
-
+  
   }
-
+  
   .box-content-two::before {
     content: "";
     position: absolute;
@@ -135,4 +132,8 @@
     opacity: 0.21; /* Define a transparência da imagem de fundo */
     z-index: 2;
   }
+
 }
+
+
+

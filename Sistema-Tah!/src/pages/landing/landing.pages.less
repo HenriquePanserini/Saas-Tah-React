@@ -1,0 +1,131 @@
+@import (less) '../../less/mixins.less';
+
+@type-display: flex;
+@direction-default: column;
+@wrap-ativo: wrap;
+@font-color-default: #fdfffd;
+@justify-text: justify;
+@bolder-font: 700;
+@position-value-default: relative;
+@padding-default: 0px;
+@margin-default: 0px;
+
+.main-box-content {
+    width: 97%;
+    height: 100%;
+    margin-left: -8px; 
+    display: @type-display;
+    flex-direction: @direction-default;
+    flex-wrap: wrap;
+    color: @font-color-default;
+
+    .box-content-one {
+        margin: 0px;
+        display: @type-display;
+        flex-direction: row;
+        flex-wrap: @wrap-ativo;
+        justify-content: space-around;
+        align-items: flex-start;
+        width: 100%;
+        height: 100%;
+    
+        .divider-title{
+    
+          .title-one {
+            text-align: right;
+            font-weight: @bolder-font;
+          }  
+    
+          .sub-title {
+            text-align: right;
+            font-weight: @bolder-font;
+            font-size: 0.875rem;
+            letter-spacing: normal;
+          }
+    
+          .button-content {
+            color: whitesmoke;
+            border: 2px solid whitesmoke;
+            border-radius: 12px;
+            font-family: Helvetica, sans-serif;
+            font-weight: 700;
+            margin-top: 20px;
+            margin-right: 150px;
+          }
+        }
+    
+        .divider-img {
+    
+          .img-note {
+             padding: 0%;
+             margin: 0%;
+             margin-left: 10px;
+             width: 478px;
+             height: 312px;
+          }
+    
+        }
+    
+    }
+    
+    .box-content-two {
+      margin: 0px;
+      padding: 0px;
+      height: 452px;
+      width: 992px;
+      position: @position-value-default;
+      display: @type-display;
+      flex-direction: @direction-default;
+      flex-wrap: @wrap-ativo;
+      justify-content: center;
+      align-items: end;
+      padding-right: 14.063rem;
+      background-color: rgba(255, 255, 255);
+      color: rgb(41, 2, 58);
+      z-index: 1;
+      
+      .text-box {
+        padding: 20px;
+        margin: @margin-default;
+        position: @position-value-default;
+        top: 10px; left: 100px;
+        background-color: rgba(253, 255, 253, 0.719);
+        justify-content: center;
+        align-items: center;
+        z-index: 3;
+        border: none;
+        border-radius: 10px;
+        
+        .title-two {
+          text-align: left;
+          font-weight: @bolder-font;
+          z-index: 3;
+        }
+    
+        .description-one {
+          text-align: left;
+          font-weight: @bolder-font;
+          z-index: 3;
+        }
+      }
+      
+    
+    }
+    
+    .box-content-two::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('/public/img/crm-fg-lg.png');
+      background-size: cover;
+      background-position: 130%;
+      opacity: 0.21; /* Define a transparência da imagem de fundo */
+      z-index: 2;
+    }
+
+ }
+ 
+

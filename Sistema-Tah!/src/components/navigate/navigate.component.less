@@ -1,13 +1,10 @@
 @import (less) '../../less/mixins.less';
+@import '../../less//variable.less';
 @import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Rubik&display=swap');
 
 @bg-default-color: transparent;
 @title-font: 'Caprasimo', cursive;
-@bolder-font: 700;
 @theme-color-default: rgb(197, 225, 248);
-@title-color-default: rgb(69, 107, 212); 
-@display-default: flex; 
-@direction-default: row;
 @content-position-default: center;
 
 @cor-inicio: #ffffff;
@@ -15,8 +12,8 @@
 @cor-fim: rgb(180, 221, 255);
 
 .nav-box {
-    padding: 0rem;
-    margin: 0rem;
+    padding: @padding-default;
+    margin: @margin-default;
     position: fixed;
 
     .nav-bar {
@@ -70,9 +67,12 @@
                 border-radius: 0.313rem;
                 margin-left: 1.115rem;
 
-                span {
+                #nav-link {
+                    padding: 0rem;
+                    margin: 0rem;
                     color: @theme-color-default;
                     font-weight: @bolder-font;
+                    font-size: 14px;
                 }
             }
          }

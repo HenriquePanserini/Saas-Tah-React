@@ -1,20 +1,22 @@
 @import (less) './less/mixins.less';
 @import './less/mixins.less';
-
-@font-default: 'Helvetica', sans-serif;
-
-@cor-inicio: #6d1eeb;
-@cor-meio: #7919b9;
-@cor-fim: #57128f;
+@import './less/variable.less';
 
 * {
-  font-family: @font-default;
+  margin: @margin-default;
+  padding: @padding-default;
+}
+
+body {
+  font-family: @font-family-default;
+  margin: @margin-default;
+  padding: @padding-default;
 }
 
 :root {
-  margin: 0px;
+  margin: @margin-default;
   padding: 0px;
   box-sizing: border-box;
-  orientation: landscape;
+  orientation: @orientation-app;
   .gradiente-bg(@cor-inicio, @cor-meio, @cor-fim)
 }

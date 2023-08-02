@@ -1,0 +1,45 @@
+@import (less) '../../less/mixins.less';
+@import '../../less/variable.less';
+
+@title-font: 'Caprasimo', cursive;
+
+.box-login-one {
+    margin: @margin-default;
+    padding: @padding-default;
+    position: @default-position;
+    justify-content: start;
+    align-items: start;
+    width: 65%;
+    height: 100%;
+
+    .box-login-title {
+        font-weight: @bolder-font;
+        font-family: @title-font;
+        font-style: italic;
+        padding: 0.825rem;
+    }
+    
+    p {
+        font-weight: 600;
+        font-family: @font-family-default;
+        font-size: 14px;
+    }
+
+    img {
+        padding: @padding-default;
+        margin: @margin-default;
+        background: @default-none;
+        border: @default-none;
+        width: 37%;
+        height: 37%;
+        z-index: -1;
+    }
+
+    .img-one-login{
+        justify-self: start;
+    }
+
+    .img-two-login {
+        justify-self: end;
+    }
+}

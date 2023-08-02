@@ -1,4 +1,6 @@
-import React, { Fragment } from 'react'
+/* eslint-disable no-unused-vars */
+import React, { Fragment } from 'react';
+import { NavLink } from 'react-router-dom';
 
 //Mui Components
 import { Box, Link, Toolbar, Typography }from '@mui/material'
@@ -38,7 +40,7 @@ function NavigateComponent() {
                <Link href='/'><FaFacebookSquare/></Link>
                <Link href='/'><BsInstagram/></Link>
                <Button className='nav-button' variant='outlined'>
-                  <span>Acessar Conta</span>
+                  <NavLink id="nav-link" to="/login" activeClassName="active">Acessar Conta</NavLink>
                </Button>
             </Toolbar>
         </AppBar>
